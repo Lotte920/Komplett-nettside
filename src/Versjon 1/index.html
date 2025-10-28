@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="no">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A Tale of Two Cities – Charles Dickens</title>
+    <style>
+    :root{
+      --lineheight: 1.5em;
+      --standardpadding: 1em;
+      --accentclr: rgba(240, 240, 240, 1);
+      --links: rgb(50, 0, 255);
+      --linksvisited: rgb(100, 50, 140);
+      --clicktext: rgb(40, 20, 120);
+      --maxw: 1200px;
+      --radius: 12px;
+      --shadow: 0 4px 16px rgba(0,0,0,.08);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1.1rem;
+      margin: 0;
+      line-height: var(--lineheight);
+      color: #111;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--links); }
+    a:visited { color: var(--linksvisited); }
+    h1, h2, h3 { margin-top: 0; }
+
+    /* A: Header med bakgrunn */
+    .hero {
+      background: url('backgroundsnow.jpeg') center/cover no-repeat;
+      min-height: 40vh;
+      display: grid;
+      place-items: center;
+      position: relative;
+      color: #111;
+    }
+    .hero__overlay {
+      width: 100%;
+      padding: 1rem;
+      background: rgba(255,255,255,0.7);
+      text-align: center;
+    }
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .nav a {
+      text-decoration: none;
+      background: rgba(255,255,255,.8);
+      padding: .35rem .7rem;
+      border-radius: 999px;
+    }
+
+    /* B: Tre kolonner */
+    .threecol {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 1rem;
+      max-width: var(--maxw);
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: var(--radius);
+      padding: var(--standardpadding);
+      box-shadow: var(--shadow);
+    }
+    .card--info {
+      font-size: .95rem;
+      background: var(--accentclr);
+      box-shadow: none;
+    }
+    .media { margin-bottom: 1rem; }
+    .media figcaption { font-size: .85rem; opacity: .8; }
+
+    /* C: Bokbokser */
+    .bookgrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      max-width: var(--maxw);
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .bookgrid div {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+
+    /* D: Ekspanderende bokser */
+    .exp {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    details {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: var(--radius);
+      padding: .5rem 1rem 1rem;
+    }
+    summary {
+      cursor: pointer;
+      color: var(--clicktext);
+      font-weight: 700;
+      margin-bottom: .5rem;
+    }
+
+    /* E: Footer */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 2rem 1rem;
+      background: #111;
+      color: #eee;
+      flex-wrap: wrap;
+    }
+    footer a { color: #fff; }
+
+    /* Responsivitet */
+    @media (max-width: 800px) {
+      .threecol {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- A -->
+<header class="hero">
+    <div class="hero__overlay">
+        <nav class="nav">
+            <a href="#">Meny 1</a>
+            <a href="#">Meny 2</a>
+            <a href="#">Meny 3</a>
+            <a href="#">Meny 4</a>
+        </nav>
+        <h1>A Tale of Two Cities – Charles Dickens</h1>
+    </div>
+</header>
+
+<!-- B -->
+<section class="threecol">
+    <aside class="card card--info">
+        <figure class="media">
+            <img src="tales2cities_serial.jpg" alt="Illustrasjon A Tale of Two Cities" />
+            <figcaption>Illustrasjon fra serien</figcaption>
+        </figure>
+        <p><strong>"A Tale of Two Cities"</strong> is a historical novel published in 1859 by English author Charles Dickens, set in London and Paris before and during the French Revolution. The novel tells the story of the French Doctor Manette, his 18-year-long imprisonment in the Bastille in Paris, and his release to live in London with his daughter Lucie whom he had never met.</p>
+    </aside>
+
+    <article class="card">
+        <h2>CHAPTER I. The Period</h2>
+        <p>It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness...</p>
+        <p>There were a king with a large jaw and a queen with a plain face, on the throne of England; there were a king with a large jaw and a queen with a fair face, on the throne of France...</p>
+        <p>It was the year of Our Lord one thousand seven hundred and seventy-five...</p>
+        <p>France, less favoured on the whole as to matters spiritual than her sister of the shield and trident...</p>
+    </article>
+
+    <aside class="card card--info">
+        <p><strong>Charles John Huffam Dickens</strong> (7 February 1812 – 9 June 1870), English novelist, journalist, short story writer and social critic. Regarded by many as the greatest novelist of the Victorian era.</p>
+        <p>In 1857, Dickens hired professional actresses for The Frozen Deep. Dickens fell in love with one of the actresses, Ellen Ternan, and this passion was to last the rest of his life...</p>
+    </aside>
+</section>
+
+<!-- C -->
+<section class="bookgrid">
+    <div><p>The Pickwick Papers (April 1836 to November 1837). Novel.</p></div>
+    <div><p>Oliver Twist (February 1837 to April 1839). Novel.</p></div>
+    <div><p>Nicholas Nickleby (April 1838 to October 1839). Novel.</p></div>
+    <div><p>The Old Curiosity Shop (April 1840 to November 1841). Novel.</p></div>
+    <div><p>Barnaby Rudge (February to November 1841). Novel.</p></div>
+    <div><p>Martin Chuzzlewit (January 1843 to July 1844). Novel.</p></div>
+    <div><p>A Christmas Carol (1843). Novella.</p></div>
+    <div><p>The Chimes (1844). Novella.</p></div>
+    <div><p>The Cricket on the Hearth (1845). Novella.</p></div>
+    <div><p>Dombey and Son (October 1846 to April 1848). Novel.</p></div>
+    <div><p>The Battle of Life (1846). Novella.</p></div>
+    <div><p>The Haunted Man (1848). Novella.</p></div>
+    <div><p>David Copperfield (May 1849 to November 1850). Novel.</p></div>
+    <div><p>Bleak House (March 1852 to September 1853). Novel.</p></div>
+    <div><p>Hard Times (April 1854 to August 1854). Novel.</p></div>
+    <div><p>Little Dorrit (December 1855 to June 1857). Novel.</p></div>
+</section>
+
+<!-- D -->
+<section class="exp">
+    <details open>
+        <summary>More about Charles Dickens</summary>
+        <p>Born in Portsmouth, Dickens left school at age 12 to work in a boot-blacking factory when his father John was incarcerated in a debtors' prison. After three years, he returned to school before beginning his literary career as a journalist. Dickens edited a weekly journal for 20 years; wrote 15 novels, five novellas, hundreds of short stories and nonfiction articles; lectured and performed readings extensively; was a tireless letter writer; and campaigned vigorously for children's rights, education and other social reforms. <a href="https://en.wikipedia.org/wiki/Charles_Dickens" target="_blank">Source</a></p>
+    </details>
+
+    <details>
+        <summary>More about "A Tale of Two Cities"</summary>
+        <p>A Tale of Two Cities is Charles Dickens’s great historical novel, set against the violent upheaval of the French Revolution. The most famous and perhaps the most popular of his works, it compresses an event of immense complexity to the scale of a family history, with a cast of characters that includes a bloodthirsty ogress and an antihero as believably flawed as any in modern fiction. <a href="https://www.goodreads.com/book/show/1953.A_Tale_of_Two_Cities" target="_blank">Source</a></p>
+    </details>
+
+    <details>
+        <summary>More about privileges in Revolutionary France</summary>
+        <p>Les fondements inégalitaires de la société d'ordres sont de plus en plus remis en cause... La bourgeoisie en quête de reconnaissance. Bien que riches et instruits, les bourgeois se trouvent exclus des rôles de commandement du royaume. <a href="https://www.lelivrescolaire.fr/page/6095521" target="_blank">Source</a></p>
+    </details>
+</section>
+
+<!-- E -->
+<footer>
+    <div>
+        <address>
+            Postboks 4, St. Olavs plass<br>
+            0130 Oslo<br>
+            Tlf.: 67 23 50 00
+        </address>
+    </div>
+    <div>
+        <ul>
+            <li><a href="#">Goodreads</a></li>
+            <li><a href="#">Worlds Without End</a></li>
+            <li><a href="#">Norli</a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>
